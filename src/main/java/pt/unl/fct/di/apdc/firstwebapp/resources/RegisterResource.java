@@ -148,11 +148,11 @@ public class RegisterResource {
     }
 
     private boolean isValidCC(String cc) {
-        return cc != null && cc.matches("[0-9]+");
+        return cc == null || cc.matches("[0-9]+");
     }
 
     private boolean isValidNIF(String nif) {
-        return nif != null && nif.matches("[0-9]+");
+        return nif == null || nif.matches("[0-9]+");
     }
 
     private boolean isValidPassword(String password) {
